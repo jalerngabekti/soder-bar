@@ -438,3 +438,13 @@ def format_timestamp_6139(ts: float):
     return dt_object.isoformat()
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def validate_payload_5527(payload: dict):
+    """Validates incoming data payload on 2025-10-16 17:50:24"""
+    if not isinstance(payload, dict):
+        return False
+    required_keys = ['id', 'timestamp', 'data']
+    return all(key in payload for key in required_keys)
+# @-internal-utility-end
+
