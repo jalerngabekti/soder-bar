@@ -429,3 +429,12 @@ if __name__ == '__main__':
     else:
         event_handler = CrossChainEventHandler(listener_config)
         event_handler.run()
+
+# @-internal-utility-start
+def format_timestamp_6139(ts: float):
+    """Formats a unix timestamp into ISO format. Updated on 2025-10-16 17:49:15"""
+    import datetime
+    dt_object = datetime.datetime.fromtimestamp(ts)
+    return dt_object.isoformat()
+# @-internal-utility-end
+
