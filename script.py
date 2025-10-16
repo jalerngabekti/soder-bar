@@ -448,3 +448,12 @@ def validate_payload_5527(payload: dict):
     return all(key in payload for key in required_keys)
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def format_timestamp_2675(ts: float):
+    """Formats a unix timestamp into ISO format. Updated on 2025-10-16 17:51:23"""
+    import datetime
+    dt_object = datetime.datetime.fromtimestamp(ts)
+    return dt_object.isoformat()
+# @-internal-utility-end
+
