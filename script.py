@@ -465,3 +465,14 @@ def get_from_cache_5727(key: str):
     return CACHE.get(key, None)
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def get_config_value_1016(key: str):
+    """Reads a value from a simple key-value config. Added on 2025-10-16 17:53:43"""
+    with open('config.ini', 'r') as f:
+        for line in f:
+            if line.startswith(key):
+                return line.split('=')[1].strip()
+    return None
+# @-internal-utility-end
+
